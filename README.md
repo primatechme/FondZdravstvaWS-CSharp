@@ -1,23 +1,37 @@
-# Primatech.FondZdravstvaWS 
+# Biblioteka Primatech.FondZdravstvaWS 
 
 .NET client za pristup web servisu FZOCG.
 
-U folderu Primatech.FondZdravstvaWS.Sample se nalazi primjer korišćenja biblioteke.
+U folderu Primatech.FondZdravstvaWS.Sample se nalazi primjer korišćenja biblioteke. Pogledati fajl *Primatech.FondZdravstvaWS.Sample/Program.cs*
 
-    // Primatech.FondZdravstvaWS.Sample/Program.cs
-    // Konfiguracija
-    _config = new FondZdravstvaWSConfig {
+
+## Konfiguracija
+ 
+Instancirati prvo *config* objekat sa parametrima za apoteku.
+
+    var config = new FondZdravstvaWSConfig {
         // Obavezno - sifra koju su sve ustanove dobile od fonda
         SifraUstanove = USTANOVA_ID,
+        
         // Sifra organizacione jedinice - dobija se pozivom 
         // sifarnika GetOrganizacioneJedinice
         OrgJedinicaId = ORG_JEDINICA,
-        // Korisnicko ime i lozinka koje su ustanove dobile od fonda
+        
+        // Korisnicko ime i lozinka koje su ustanove dobile od fonda, potpisom ugovora
         Username = USERNAME,
         Password = PASSWORD
     };
-    // Korišćenje klijenta
-    var client = new FondZdravstvaWSClient(_config);
+    
+## Klijent
+
+U konstruktoru servisa predati *config* objekat.
+    
+    var client = new FondZdravstvaWSClient(config);
+    
+## Poziv metoda servisa
+
+Primjer pozivanja sifarnika proizvodjaca.
+
     var result = client.GetProizvodjaci();
 
 # Open source licenca
