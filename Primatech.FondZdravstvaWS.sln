@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primatech.FondZdravstvaWS.Sample", "Primatech.FondZdravstvaWS.Sample\Primatech.FondZdravstvaWS.Sample.csproj", "{16D17E2B-8996-4A7C-85DA-63F8FA3EF93A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4DCB6A38-4AFF-40CB-AF70-6706C81C7D7C} = {4DCB6A38-4AFF-40CB-AF70-6706C81C7D7C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primatech.FondZdravstvaWS", "Primatech.FondZdravstvaWS\Primatech.FondZdravstvaWS.csproj", "{4DCB6A38-4AFF-40CB-AF70-6706C81C7D7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16D17E2B-8996-4A7C-85DA-63F8FA3EF93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D17E2B-8996-4A7C-85DA-63F8FA3EF93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D17E2B-8996-4A7C-85DA-63F8FA3EF93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D17E2B-8996-4A7C-85DA-63F8FA3EF93A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DCB6A38-4AFF-40CB-AF70-6706C81C7D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCB6A38-4AFF-40CB-AF70-6706C81C7D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCB6A38-4AFF-40CB-AF70-6706C81C7D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCB6A38-4AFF-40CB-AF70-6706C81C7D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34BD0561-4019-4B9B-9FE9-8FD1D5DD34A0}
+	EndGlobalSection
+EndGlobal
