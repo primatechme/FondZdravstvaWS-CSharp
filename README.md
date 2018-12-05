@@ -24,7 +24,7 @@ Instancirati prvo *config* objekat sa parametrima za apoteku.
     
 ## Klijent
 
-U konstruktoru servisa predati *config* objekat.
+U konstruktoru servisa predati *config* objekat.<br />
 **Napomena**: Sve metode iz oba servisa su implemetarana u ovom klijentu.
 
     var client = new FondZdravstvaWSClient(config);
