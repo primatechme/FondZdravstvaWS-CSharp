@@ -1,0 +1,47 @@
+# Primatech.FondZdravstvaWS 
+
+.NET client za pristup web servisu FZOCG.
+
+U folderu Primatech.FondZdravstvaWS.Sample se nalazi primjer korišćenja biblioteke.
+
+    // Primatech.FondZdravstvaWS.Sample/Program.cs
+    // Konfiguracija
+    _config = new FondZdravstvaWSConfig {
+        // Obavezno - sifra koju su sve ustanove dobile od fonda
+        SifraUstanove = USTANOVA_ID,
+        // Sifra organizacione jedinice - dobija se pozivom 
+        // sifarnika GetOrganizacioneJedinice
+        OrgJedinicaId = ORG_JEDINICA,
+        // Korisnicko ime i lozinka koje su ustanove dobile od fonda
+        Username = USERNAME,
+        Password = PASSWORD
+    };
+    // Korišćenje klijenta
+    var client = new FondZdravstvaWSClient(_config);
+    var result = client.GetProizvodjaci();
+
+# Open source licenca
+
+
+
+    The MIT License
+
+    Copyright (c) 2018 Primatech, doo. http://www.primatech.me
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
