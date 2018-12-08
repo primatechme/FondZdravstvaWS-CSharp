@@ -38,10 +38,12 @@ Primjer pozivanja sifarnika proizvodjaca.
 # Problemi
 ## Verzija Visual Studio
 Koristiti VS2015 i novije. Za starije VS zamjeniti liniju 
-     if (Int32.TryParse(res,var out broj))
+      
+      if (Int32.TryParse(res,var out broj))
 sa
-     var broj = 0;
-     if (Int32.TryParse(res, out broj))
+      
+      var broj = 0;
+      if (Int32.TryParse(res, out broj))
             
 ## Greska "The request was aborted: Could not create SSL/TLS secure channel"
 Prije instanciranja Configa dodati sledece dvije linije koda.
