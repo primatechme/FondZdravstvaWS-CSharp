@@ -1,4 +1,5 @@
-﻿using Primatech.FondZdravstvaWS.Helpers;
+﻿using System.Net;
+using Primatech.FondZdravstvaWS.Helpers;
 using Primatech.FondZdravstvaWS.Models.Lager;
 using Primatech.FondZdravstvaWS.Models.Sifarnici;
 using Primatech.FondZdravstvaWS.Proxy;
@@ -18,6 +19,9 @@ namespace Primatech.FondZdravstvaWS
 
         public FondZdravstvaWSClient(FondZdravstvaWSConfig config)
         {
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             config.LagerUrl = URL_LAGER;
             config.SifarniciUrl = URL_SIFARNICI;
             Config = config;
@@ -75,6 +79,20 @@ namespace Primatech.FondZdravstvaWS
             var response = _lagerProxy.getLager(xml);
             var result = SerializationHelper.XmlStringToData<PostLagerResponse>(response);
             return result;
+        }
+
+        public string PostLagerRaw(PostLagerRequest model)
+        {
+            var xml = SerializationHelper.DataToXmlString(model);
+            var response = _lagerProxy.getLager(xml);
+            return response;
+        }
+
+        public string PostLagerFromFile(string fileName)
+        {
+            string xml = System.IO.File.ReadAllText(fileName);
+            var response = _lagerProxy.getLager(xml);
+            return response;
         }
     }
 }

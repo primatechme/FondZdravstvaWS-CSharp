@@ -6,10 +6,10 @@ namespace Primatech.FondZdravstvaWS.Sample
 {
     class Program
     {
-        const string USTANOVA_ID = "#####";
-        const string ORG_JEDINICA = "######";
-        const string USERNAME = "******";
-        const string PASSWORD = "***************";
+        const string USTANOVA_ID = "83058";
+        const string ORG_JEDINICA = "980178";
+        const string USERNAME = "zalihe5";
+        private const string PASSWORD = "s-&1*=I*r#a6rc=6";
 
         static FondZdravstvaWSConfig _config;
 
@@ -36,8 +36,8 @@ namespace Primatech.FondZdravstvaWS.Sample
             Console.WriteLine("6. Post lager");
 
             var res = Console.ReadLine();
-
-            if (Int32.TryParse(res, out var broj))
+            var broj = 0;
+            if (Int32.TryParse(res, out broj))
             {
                 try
                 {
@@ -128,7 +128,7 @@ namespace Primatech.FondZdravstvaWS.Sample
                     Naziv = "Test- Tasmar tabl.",
                     JMFond = "kut.",
                     Kolicina = 100,
-                    Datum = $"{DateTime.Now:dd.MM.yyyy}"
+                    Datum = "{DateTime.Now:dd.MM.yyyy}"
                 },
                 new Lager
                 {
@@ -138,7 +138,7 @@ namespace Primatech.FondZdravstvaWS.Sample
                     Naziv = "Test- Brinedrin",
                     JMFond = "kut.",
                     Kolicina = 74,
-                    Datum = $"{DateTime.Now:dd.MM.yyyy}"
+                    Datum = "{DateTime.Now:dd.MM.yyyy}"
                 }
             };
 
