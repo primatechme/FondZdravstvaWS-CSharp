@@ -34,6 +34,13 @@ U konstruktoru servisa predati *config* objekat.<br />
 Primjer pozivanja sifarnika proizvodjaca.
 
     var result = client.GetProizvodjaci();
+    
+## Slanje fajla (sa putanjom)
+
+Za slanje fajla direktno, predati punu putanju do fajla.
+
+    string fileName=<enter full path here>;
+    var result = client.PostLagerFromFile(fileName);
 
 # Problemi
 ## Verzija Visual Studio
